@@ -38,7 +38,7 @@ int helpFunction(int help){
               printf("Invoke driver.c using the following format:\n");
               printf("\ndriver [-h] [-t sec] [logfile]\n");
               printf(" -h: Prints help message.\n");
-              pritnf(" -t sec: Prints messages on an average of every 'sec' seconds.\n");
+              printf(" -t sec: Prints messages on an average of every 'sec' seconds.\n");
               printf(" [filename]: Saves messages to the specified filename\n");
               printf("\nNOTE: Default filename is messages.log.\n");
 	} else {
@@ -61,7 +61,7 @@ int main(int arg_count, char **arg_vector) {
             break;
         case 2 :
 			              printf("1 argument detected\n");
-			              testOptCode(arg_count, arg_vector);
+			              testOPT(arg_count, arg_vector);
             break;
         case 3 :
 			              printf("2 arguments detected\n");
