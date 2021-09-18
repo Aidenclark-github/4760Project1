@@ -1,5 +1,5 @@
-driver: driver.c log.h log.c
-  gcc -o driver driver.c log.c log.c -I
+driver: driver.c log.h loglib.c
+  gcc -o driver driver.c loglib.c loglib.c -I
   
 clean: 
   rm driver.o driver driver.a
