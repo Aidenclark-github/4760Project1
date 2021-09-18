@@ -6,7 +6,7 @@ typedef struct data_struct{
   char*string;   // Message string
 } data_t;
 
-int addmsg ( const char type, const char *logHIST msg );
+int addmsg ( const char type, const char * msg );
 void clearlog();
 char * getlog();
-int savelog ( char*filename );
+int savelog ( char *filename );
