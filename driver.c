@@ -66,15 +66,15 @@ int main(int arg_count, char **arg_vector) {
             break;
         case 3 :
 			              printf("2 arguments detected\n");
-                    testOptCode(arg_count, arg_vector);
+                    testOPT(arg_count, arg_vector);
             break;
         case 4 :
 			              printf("3 arguments detected. .\n");
-                    testOptCode(arg_count, arg_vector);
+                    testOPT(arg_count, arg_vector);
             break;
         case 5 :
 			              printf("4 arguments detected.\n");
-                    testOptCode(arg_count, arg_vector);
+                    testOPT(arg_count, arg_vector);
             break;
         default:
                     perror("Too many arguments");
