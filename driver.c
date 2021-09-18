@@ -3,21 +3,21 @@
 #include <getopt.h> 
 #include <ctype.h>
 
-// Pointer to constant 
-const char *logger = "0;
+# Pointer to constant 
+const char *logger = 0;
   
-void testOPT(int argc, char *argv[])
+void testOPT(int arg_count, char *arg_vector[])
 {
     int opt;
     int seconds = 0;
       
     # Take in h and t options 
-    while((opt = getopt(argc, argv, “ht:”)) != -1) 
+    while((opt = getopt(arg_count, arg_vector, “ht:”)) != -1) 
     { 
         switch(opt) 
         {  
             case ‘h’: 
-                     helpFunction(terminate);
+                     helpFunction(EXIT_SUCCESS);
                break; 
             case ‘t’: 
                      seconds = atoi(optarg);
@@ -26,11 +26,11 @@ void testOPT(int argc, char *argv[])
     } 
       
     # For extra arguments that aren't parsed
-    for(; optind < argc; optind++){     
-        printf(“extra arguments: %s\n”, argv[optind]); 
+    for(; optind < arg_count; optind++){     
+        printf(“extra arguments: %s\n”, arg_vector[optind]); 
     }
       
-    return 0;
+    return;
 }
                        
 int helpFunction(int help){
@@ -41,21 +41,20 @@ int helpFunction(int help){
               pritnf(" -t sec: Prints messages on an average of every 'sec' seconds.\n");
               printf(" [filename]: Saves messages to the specified filename\n");
               printf("\nNOTE: Default filename is messages.log.\n");
-                            } 
-      else {
+	} else {
               #use perror
               perror("Error: Please use correct format for input: [-h] [-t sec] [logfile]");
              {
              exit(help);
 } 
         
- void logger(const char *parsed) {
+ void loggerName(const char *parsed) {
 	logger = parsed;
 }
 
 #argc will be the number of strings pointed to by argv. 
 int main(int arg_count, char **arg_vector) {
-    logger(arg_vector[0]);
+    loggerName(arg_vector[0]);
     switch(arg_count) {
         case 1 :
                     printf("No arguments detected.\n");
