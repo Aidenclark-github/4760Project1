@@ -2,8 +2,6 @@
 #include <stdio.h>  
 #include <getopt.h> 
 #include <ctype.h>
----
-#include <stdbool.h>         
 
 // Pointer to constant 
 const char *logger = "0;
