@@ -11,7 +11,7 @@ void testOPT(int argc, char *argv[])
     int opt;
     int seconds = 0;
       
-    // Take in h and t options 
+    # Take in h and t options 
     while((opt = getopt(argc, argv, “ht:”)) != -1) 
     { 
         switch(opt) 
@@ -25,7 +25,7 @@ void testOPT(int argc, char *argv[])
         } 
     } 
       
-    // For extra arguments that aren't parsed
+    # For extra arguments that aren't parsed
     for(; optind < argc; optind++){     
         printf(“extra arguments: %s\n”, argv[optind]); 
     }
@@ -43,7 +43,7 @@ int helpFunction(int help){
               printf("\nNOTE: Default filename is messages.log.\n");
                             } 
       else {
-              //use perror
+              #use perror
               perror("Error: Please use correct format for input: [-h] [-t sec] [logfile]");
              {
              exit(help);
@@ -53,7 +53,7 @@ int helpFunction(int help){
 	logger = parsed;
 }
 
-//argc will be the number of strings pointed to by argv. 
+#argc will be the number of strings pointed to by argv. 
 int main(int arg_count, char **arg_vector) {
     logger(arg_vector[0]);
     switch(arg_count) {
