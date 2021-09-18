@@ -9,10 +9,11 @@ const char *logger = 0;
 void testOPT(int arg_count, char *arg_vector[])
 {
     int opt;
-    int seconds = 0;
+    int seconds;
+	opt = getopt(arg_count, arg_vector, “ht:”);
       
     # Take in h and t options 
-    while((opt = getopt(arg_count, arg_vector, “ht:”)) != -1) 
+    while(opt != -1) 
     { 
         switch(opt) 
         {  
@@ -20,7 +21,9 @@ void testOPT(int arg_count, char *arg_vector[])
                      helpFunction(EXIT_SUCCESS);
                break; 
             case ‘t’: 
-                     seconds = atoi(optarg);
+			if (seconds = atoi(*ptarg)){
+				} else {
+				}                     
                break; 
         } 
     } 
@@ -60,24 +63,24 @@ int main(int arg_count, char **arg_vector) {
                     printf("No arguments detected.\n");
             break;
         case 2 :
-			              printf("1 argument detected\n");
-			              testOPT(arg_count, arg_vector);
+			printf("1 argument detected\n");
+			testOPT(arg_count, arg_vector);
             break;
         case 3 :
-			              printf("2 arguments detected\n");
-                    testOPT(arg_count, arg_vector);
+			printf("2 arguments detected\n");
+                    	testOPT(arg_count, arg_vector);
             break;
         case 4 :
-			              printf("3 arguments detected. .\n");
-                    testOPT(arg_count, arg_vector);
+			printf("3 arguments detected. .\n");
+                   	testOPT(arg_count, arg_vector);
             break;
         case 5 :
-			              printf("4 arguments detected.\n");
-                    testOPT(arg_count, arg_vector);
+			printf("4 arguments detected.\n");
+                   	testOPT(arg_count, arg_vector);
             break;
         default:
-                    perror("Too many arguments");
-			              exit(EXIT_FAILURE);
+                   	perror("Too many arguments");
+			exit(EXIT_FAILURE);
     }
 	
 	printf("Main end:", arg_vector[0], arg_vector[1]);
