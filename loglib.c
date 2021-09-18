@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <errno.h>
 #include <time.h>
 #include "log.h"
  
@@ -13,17 +12,17 @@ typedef struct list_struct {
 static log_t* headptr = NULL;
 static log_t* tailptr = NULL;
  
-int addmsg (data_t data) {
+int addmsg(const char type, const char * msg) {
    return 0;
 }
 
 void clearlog (void) {  
 } 
 
-char* getlog (void) {
+char *getlog (void) {
    return NULL;
 }
  
-int savelog (char* filename) {
+int savelog (char *filename) {
    return 0;
 }
