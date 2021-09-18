@@ -3,7 +3,7 @@
 #include <string.h>
 #include <errno.h>
 #include <time.h>
-#include "loggerlib.h"
+#include "log.h"
  
 typedef struct list_struct {
    data_t item;
