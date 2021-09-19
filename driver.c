@@ -7,11 +7,10 @@
 const char *logger = 0;
 
 // Process the arguments 
-void testOPT(int arg_count, char *arg_vector[])
-{
+void testOPT(int arg_count, char *arg_vector[]) {
     int opt;
     int seconds;
-	opt = getopt(arg_count, arg_vector, “ht:”);
+    opt = getopt(arg_count, arg_vector, “ht:”);
       
     # Take in h and t options 
     while(opt != -1) 
