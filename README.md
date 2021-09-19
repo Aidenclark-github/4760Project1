@@ -21,7 +21,6 @@ Helpful Links:
 * https://stackoverflow.com/questions/17509479/switch-case-for-parsing-options
 ---
 ## Submission Note: 
----
 My files are not located in a directory with my username. 
 But you can use the Makefile right away once in my hoare account. 
 ---
