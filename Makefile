@@ -6,8 +6,8 @@ OBJS = driver.o
 $(TARGET): $(OBJS)
     $(CC) - o $(TARGET) $(OBJS)
 
-loglib.a: driver.o
-    ar -rcs loglib.a driver.o
+loglib.o: driver.o
+    ar -rcs loglib.o driver.o
     
 driver.o: driver.c
     $(CC) $(CFLAGS) -c driver.c
