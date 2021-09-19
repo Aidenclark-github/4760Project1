@@ -8,9 +8,9 @@
 ---
 ## Reasources Used 
 Creating the Makefile:
-[https://www.cs.colby.edu/maxwell/courses/tutorials/maketutor/]
+* [https://www.cs.colby.edu/maxwell/courses/tutorials/maketutor/]
 
 
 Book: 
-Unix™ Systems Programming: Communication, Concurrency, and Threads
-By Kay A. Robbins, Steven Robbins
+* Unix™ Systems Programming: Communication, Concurrency, and Threads
+* By Kay A. Robbins, Steven Robbins
