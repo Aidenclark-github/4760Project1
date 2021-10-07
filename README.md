@@ -22,7 +22,6 @@ Helpful Links:
 * https://man7.org/linux/man-pages/man2/shmctl.2.html
 ---
 ## Submission Note: 
-
 ---
 ## Contact Information: 
 - Aiden Clark (ahck8w@umsystem.edu)
